@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Share+Tech+Mono&display=swap');
+
+*{box-sizing: border-box;}
+
+body {
+  background: #c2c2d6;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  width: 334px;
+  padding: 5px;
+  background: #000;
+  border: 2px solid #47476b;
+}
+button {
+  margin: 0;
+  position: relative;
+  height: 65px;
+  width: 80px;
+  color: white;
+  outline: 1px solid black;
+  border: none;
+  background: #4d4d4d;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 20px;
+  cursor: default;
+}
+button:hover {
+  color: black;
+  outline: 0.05em solid grey;
+  z-index: 3;
+}
+.formulaScreen {
+  min-height: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  color: orange;
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.output {
+  font-size: 29px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+}
+.big {
+  width: 160px;
+  background: rgb(172, 57, 57);
+}
+.zero {
+  width: 160px;
+}
+.sign {
+  background: rgb(102, 102, 102);
+}
+.equals {
+  background: rgb(0, 68, 102);
+  position: absolute;
+  height: 130px;
+  bottom: 188px;
+}
