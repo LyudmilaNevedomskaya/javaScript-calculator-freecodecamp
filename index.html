@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javascript Calculator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="wrapper">
-    <div class="container">
-      <div id="formula" class="formulaScreen">0</div>
-      <div id="output" class="output">0</div>
-      <button id="clear" class="big" value="AC">AC</button><!--
-    --><button id="divide" class="sign" value="/">&divide</button><!--
-    --><button id="multiply" class="sign" value="*">&times</button><!--
-    --><button id="seven" value="7">7</button><!--
-      --><button id="eight" value="8">8</button><!--
-      --><button id="nine" value="9">9</button><!--
-      --><button id="subtract" class="sign" value="-">-</button><!--
-      --><button id="four" value="4">4</button><!--
-      --><button id="five" value="5">5</button><!--
-      --><button id="six" value="6">6</button><!--
-      --><button id="add" class="sign" value="+">+</button><!--
-      --><button id="one" value="1">1</button><!--
-      --><button id="two" value="2">2</button><!--
-      --><button id="three" value="3">3</button><!--
-      --><button id="zero" class="zero" value="0">0</button><!--
-      --><button id="decimal" value=".">.</button><!--
-      --><button id="equals" class="equals" value="=">=</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root" class="wrapper">
     </div>
-    <p>made by Mila</p>
-  </div>
-  
 
-  <script src="script.js"></script>
-</body>
+    <script type="text/babel" src="./script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>

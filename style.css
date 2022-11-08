@@ -15,37 +15,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  width: 334px;
-  padding: 5px;
   background: #000;
   border: 2px solid #47476b;
+  border-radius: 4px;
+  padding: 5px;
 }
-button {
-  margin: 0;
-  position: relative;
-  height: 65px;
-  width: 80px;
-  color: white;
-  outline: 1px solid black;
-  border: none;
-  background: #4d4d4d;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 20px;
-  cursor: default;
-}
-button:hover {
-  color: black;
-  outline: 0.05em solid grey;
-  z-index: 3;
-}
+
 .formulaScreen {
-  min-height: 20px;
+  min-height: 30px;
   font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   color: orange;
   text-align: right;
   vertical-align: text-top;
@@ -54,25 +42,57 @@ button:hover {
   word-wrap: break-word;
 }
 .output {
-  font-size: 29px;
+  min-height: 40px;
+  font-size: 35px;
   font-family: 'Orbitron', sans-serif;
   color: white;
   text-align: right;
   line-height: 35px;
 }
-.big {
-  width: 160px;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  color: aliceblue;
+  border: 1px solid black;
+  cursor: pointer;
+  background: #4d4d4d;
+  font-size: 20px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.btn:hover {
+  color: black;
+  outline: 0.05em solid aliceblue;
+  z-index: 3;
+}
+.AC {
   background: rgb(172, 57, 57);
-}
-.zero {
-  width: 160px;
-}
-.sign {
-  background: rgb(102, 102, 102);
 }
 .equals {
   background: rgb(0, 68, 102);
-  position: absolute;
-  height: 130px;
-  bottom: 188px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "AC AC divide times"
+  "seven eight nine minus"
+  "four five six plus"
+  "one two three equals"
+  "zero zero decimal equals";
+}
+.divide, .times, .minus, .plus {
+  background: #666666;
+}
+
+.AC {
+  grid-area: AC;
+}
+.zero {
+  grid-area: zero;
+}
+.equals {
+  grid-area: equals;
 }
