@@ -63,6 +63,7 @@
 
 function App() {
   const [display, setDisplay] = React.useState("")
+  const [result, setResult] = React.useState()
   const [num, setNum] = React.useState(0)
 
   const displayNum = (e) => {
@@ -72,8 +73,13 @@ function App() {
       setNum(numClicked)
     } else {
       setNum(prev => {
+        if (prev === '0') {
+          setNum(0)
+          setDisplay("")
+        }
         if (prev === '+' || prev === '-' || prev === '*' || prev === '/' || prev === 0 || prev === '.') {
-          let newNum = prev+numClicked
+          
+          let newNum = prev + numClicked;
           let toDisplay = newNum.substring(1)
           return toDisplay;
         } else {
