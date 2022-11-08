@@ -72,7 +72,7 @@ function App() {
       setNum(numClicked)
     } else {
       setNum(prev => {
-        if (prev === '+' || prev === '-' || prev === '*' || prev === '/' || prev === 0) {
+        if (prev === '+' || prev === '-' || prev === '*' || prev === '/' || prev === 0 || prev === '.') {
           let newNum = prev+numClicked
           let toDisplay = newNum.substring(1)
           return toDisplay;
@@ -88,17 +88,22 @@ function App() {
     setNum(0)
   }
 
-  const equals = () => {
-    alert('equals')
+  const equals = (e) => {
+    const numClicked = e.target.value;
+    setDisplay(prev => {
+      let res = eval(display);
+      return prev + numClicked + res;
+    })
+    setNum(eval(display))
   }
 
 
   return (
     <div className="main">
       <div className="container">
-        <div id="formula" class="formulaScreen">{display}</div>
-        <div id="display" class="output">{num}</div>
-        <div class="grid">
+        <div id="formula" className="formulaScreen">{display}</div>
+        <div id="display" className="output">{num}</div>
+        <div className="grid">
           <button onClick={clear} id="clear" className="AC btn" value="AC">AC</button>
           <button onClick={displayNum} id="multiply" className="times btn" value="*">x</button>
           <button onClick={displayNum} id="divide" className="divide btn" value="/">/</button>
